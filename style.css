@@ -1,7 +1,11 @@
+body {
+  background-color: rgb(252, 249, 230);
+}
+
 .gravityZone {
   display: flex;
-  width: 100px;
-  height: 100px;
+  width: 300px;
+  height: 300px;
   position: relative;
   margin: auto;
   background-color: green;
@@ -12,10 +16,9 @@ button {
   border: none;
   background-color: rgb(19, 19, 107);
   color: rgb(3, 255, 196);
-  position: absolute;
-  width: 50px;
+  width: fit-content;
   height: 50px;
-  top: calc(50% - 25px);
-  left: calc(50% - 25px);
+  margin: auto;
+  transform: translate(0, 0);
   transition: all 0.2s ease-out;
 }
