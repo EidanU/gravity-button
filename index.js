@@ -62,14 +62,20 @@ function calcultateMousePosition() {
         100
     );
 
+    if (hyp < 80) {
+      translateX =
+        (Math.abs(relativeMousePositionX) /
+          (gravityZoneElement.offsetWidth / 2)) *
+        100;
+
+      translateY =
+        (Math.abs(relativeMousePositionY) /
+          (gravityZoneElement.offsetWidth / 2)) *
+        100;
+      console.log(translateY);
+    }
     translateX *= cos * 0.5;
     translateY *= sin * 0.5;
-    if (translateX > 80 && translateY > 80) {
-      translateX =
-        (relativeMousePositionX / (gravityZoneElement.offsetWidth / 2)) * 100;
-      translateY =
-        (relativeMousePositionY / (gravityZoneElement.offsetWidth / 2)) * 100;
-    }
     buttonElement.style.transform = `translate(${translateX}% ,${translateY}%)`;
   }, 1000 / 120);
 }
